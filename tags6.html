@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TAGS</title>
+</head>
+<center>
+<body>
+	<button><header id="top"><a href="#bottom">GOTO BOTTOM</header></button>
+		<p>HTML5 defines a <nav> element that can be used to contain the primary navigation of a website, be it<br> a list of links or a form element such as a search box.<br> This is a good idea. Previously, we would have contained the<br> navigation block inside something like <div id="navigation">. While this works fine for styling purposes, it is a <div>, and therefore semantically anonymous. The <nav> element provides a consistent way to unambiguously define <br>the <br>primary navigation areas. This is good for both search engine optimization and for visually impaired <br>users. A <br>
+		screen reader user can more easily find the navigation area if it is clearly signposted (this does depend on whether the screen reader supports the <nav> element, so it might be a way off yet). <br>A navigation block would look something like this:<br>
+			Each section of the page also has a “Back to menu” link that works in the same way, but points back to the menu instead. Technically, this is all you need to make this kind of navigation work; however, there is an annoying bug in Internet Explorer that forces you do to a bit more work.
+			Sitemaps are what you might expect: maps of all the different pages of your site (or the main sections of very large sites). They allow your site’s visitors to get a glimpse of the overall structure of your site, and quickly go anywhere they want, even if the page they need is deep within your page hierarchy.
+
+Both sitemaps and site searches are a great way of offering visitors a fallback option when they are lost or to offer quick access for those who are in a hurry. From an HTML point of view they could either be one massive nested list full of links or, in the case of very large sites, section headings with nested links of section-specific hierarchies, or even search forms for each of the sections.
+
+You can try out this bug for yourself:
+
+Open the document in Internet Explorer 6 or 7.
+Do not use a mouse; instead use the keyboard to navigate the document. You can hit the tab key to jump from link to link and the enter key to activate a link — in this case to jump to the section it points to.<br>
+Seemingly all is well when you do that — the browser scrolls down to where you wanted to go.<br>
+If you hit the tab key again the right behaviour for the browser is to take you to (give focus to) the first link inside the section you chose. Internet Explorer,<br> however, will take you back to the start of the menu at the top of the page!
+The way around this is terribly confusing and deals with a special property of Internet Explorer called <hasLayout>. You can trigger this in several ways, all of which are explained in Ingo Chao’s article On having layout. The easiest way is to wrap the anchor in an element and then set that element’s <br>width using CSS. In this case we used <section> elements and then set their width to 100% using CSS. This is what IE needs <br>— the anchor must be inside an element with <hasLayout>.
+
+Having to do this is annoying, but it also helps you if you want <br>to style the sections differently — you can’t add styling to a whole section unless you wrap it in an appropriate block level element.<br>
+
+Note that keyboard navigation around links in Opera wo<br>rks slightly differently —<br> try looking at the above example in Opera, then hold down Shift and use the arrow keys to navigate around links (it also works on form elements). This is called spatial navigation.
+</p>
+<button><footer id="bottom"><a href="#top">GOTO TOP</a></footer></button>
+</center>
+</body>
+</html>
